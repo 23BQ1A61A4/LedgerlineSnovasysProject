@@ -1,0 +1,15 @@
+:root{--ink:#16233a;--muted:#64748b;--line:#d5dde8;--paper:#f6f8fb;--card:#fff;--accent:#1f4f8f;--ok:#16794a;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root{--ink:#e6ecf5;--muted:#94a3b8;--line:#2b3a52;--paper:#0f1726;--card:#16213a;--accent:#7fb0f0;--ok:#4cc38a;--bad:#ff8a80}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:20px}h1{font-size:22px;margin:0 0 12px}h3{margin:0 0 10px}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}.narrow{max-width:360px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:760px){.grid{grid-template-columns:1fr}}
+label{display:block;margin-bottom:10px;font-size:13px;color:var(--muted)}input,select{display:block;width:100%;margin-top:4px;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tab{background:transparent;color:var(--ink);border:1px solid var(--line)}.tab.on{background:var(--accent);color:#fff}.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}
+.row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}.acct{display:flex;justify-content:space-between;gap:10px;padding:10px;border:1px solid var(--line);border-radius:6px;margin-bottom:8px;cursor:pointer}.acct.sel{border-color:var(--accent)}
+.num{font-variant-numeric:tabular-nums;font-family:ui-monospace,Consolas,monospace}.r{text-align:right}.muted{color:var(--muted)}.small{font-size:12px;word-break:break-all}
+.ok,.pos{color:var(--ok)}.err,.neg{color:var(--bad)}table{width:100%;border-collapse:collapse}th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}.scroll{overflow-x:auto}pre{white-space:pre-wrap}
+.live{font-size:12px;font-weight:400;color:var(--ok);margin-left:8px}
