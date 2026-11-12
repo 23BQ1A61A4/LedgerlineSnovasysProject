@@ -35,6 +35,7 @@ public class SecurityConfig {
         .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(a -> a
             .requestMatchers(HttpMethod.GET, "/", "/index.html", "/assets/**", "/favicon.ico").permitAll()
+            .requestMatchers("/api/health", "/api/auth/login", "/error").permitAll()
             .requestMatchers("/api/**").authenticated() // role decisions are made in Policy
             .anyRequest().denyAll())                    // deny by default
         .oauth2ResourceServer(o -> o.jwt(Customizer.withDefaults()));

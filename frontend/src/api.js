@@ -1,4 +1,4 @@
-
+const API = import.meta.env.VITE_API_URL ?? (import.meta.env.DEV ? "http://localhost:8080" : "");
 export async function api(path, { method = "GET", body, idemKey } = {}) {
   const t = sessionStorage.getItem("token");
   const res = await fetch(API + path, { method, body: body ? JSON.stringify(body) : undefined,
